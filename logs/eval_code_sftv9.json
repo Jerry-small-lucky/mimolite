@@ -1,0 +1,1656 @@
+{
+ "meta": {
+  "ckpt": "F:\\自研大模型\\runs\\sft_v9\\final.pt",
+  "data": "F:\\自研大模型\\data\\eval_code.jsonl",
+  "n_total": 100,
+  "created": "2026-10-18 22:56:10",
+  "gen": {
+   "temperature": 0.2,
+   "top_k": 50,
+   "top_p": 0.9,
+   "repetition_penalty": 1.1,
+   "max_context": 1024,
+   "max_new_tokens": 512,
+   "batch": 4,
+   "seed": 2026,
+   "samples": 1,
+   "timeout_s": 20,
+   "bf16": true
+  },
+  "device": "cuda",
+  "done": true
+ },
+ "summary": {
+  "n": 100,
+  "n_pass": 20,
+  "n_fail": 80,
+  "pass_rate": 0.2,
+  "avg_gen_tokens": 153.6,
+  "avg_gen_chars": 249.7,
+  "duration_s": 146.4
+ },
+ "failures": [
+  {
+   "id": "eval_00000",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|IndentationError: unindent does not match any outer indentation level",
+   "question": "Count the frequency of each element in a list.",
+   "gen_excerpt": "推理：The task requires counting the list of the previous two-squares. We'll use a string to replace the count and convert them to a string, checking them back with no input string. The solution is a pur"
+  },
+  {
+   "id": "eval_00001",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'count_ways' is not defined",
+   "question": "Count the number of ways to climb n stairs, taking 1 or 2 steps at a time.",
+   "gen_excerpt": "推理：用内置 bin 转二进制后计数。\n\n代码：\n```python\ndef count_set_bits(n):\n    return bin(n).count('1')\n```"
+  },
+  {
+   "id": "eval_00004",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "timeout",
+   "question": "给定一个整数n，返回其二进制表示中1的个数。输入输出示例：输入5（二进制101），输出2；输入0输出0；输入1输出1。",
+   "gen_excerpt": "推理：本题使用位运算统计1的个数。算法选择为循环，时间复杂度O(log n)，空间复杂度O(1)。关键步骤是循环处理1，但每次与1进行与运算，直到余数为0。\n\n代码：\n```python\ndef count_ones(n):\n    count = 0\n    while n:\n        if n & 1:\n            count += 1\n    return count\n``"
+  },
+  {
+   "id": "eval_00005",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'count_chars' is not defined. Did you mean: 'count_characters'?",
+   "question": "统计字符串中每个字符出现的次数，输出字典形式的结果。",
+   "gen_excerpt": "`推理：本题使用字符串中的每个字符的计数，时间复杂度为O(n)，空间复杂度为O(1)（原地考察字符串排序）。\n\n代码：\n```python\ndef count_characters(s):\n    counts = {}\n    for char in s:\n        counts[char] = counts.get(char, 0) + 1\n    return counts\n```"
+  },
+  {
+   "id": "eval_00006",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid character '：' (U+FF1A)",
+   "question": "给定一个整数n，计算其阶乘。输入输出示例：输入3，输出6；输入0，输出1；输入5，输出120。",
+   "gen_excerpt": "````python\n代码：\n```python\ndef factorial(n):\n    if n == 0:\n        return 1\n    return n * factorial(n - 1)\n```"
+  },
+  {
+   "id": "eval_00007",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "no_code_block",
+   "question": "合并两个有序数组，返回合并后的有序数组。",
+   "gen_excerpt": "`ython推理：\n[ ]                                                                                                                                                                                           "
+  },
+  {
+   "id": "eval_00008",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid syntax",
+   "question": "统计字符串中每个字符出现的次数，包括大小写和特殊字符。",
+   "gen_excerpt": "``python\n：}\n代码：\n````python\ndef count_characters(s):\n    counts = {}\n    for c in s:\n        counts[c] = counts.get(c, 0) + 1\n    return counts\n```"
+  },
+  {
+   "id": "eval_00010",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "no_code_block",
+   "question": "将字符串中的每个字符转换为大写，并去除所有空格。",
+   "gen_excerpt": "``python\n：}\n```"
+  },
+  {
+   "id": "eval_00011",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'count_characters' is not defined. Did you mean: 'count_chars'?",
+   "question": "给定一个字符串，统计每个字符出现的次数（支持大小写区分）。",
+   "gen_excerpt": "`推理：本题使用欧几里得算法（辗转相除法）来记录字符出现的频率。时间复杂度为O(n)，空间复杂度为O(n)。\n\n代码：\n```python\ndef count_chars(s):\n    counts = {}\n    for c in s:\n        counts[c] = counts.get(c, 0) + 1\n    return counts\n```"
+  },
+  {
+   "id": "eval_00013",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid syntax",
+   "question": "给定一个整数数组，统计其中偶数的个数和总和。",
+   "gen_excerpt": "`推理：本题使用贪心算法，通过遍历数组元素，统计每个元素，统计个数。时间复杂度O(n)，空间复杂度O(1)。\n\n代码：\n```python``python\ndef count_even_numbers(lst):\n    count = 0\n    for num in lst:\n        if num % 2 == 0:\n            count += 1\n    return "
+  },
+  {
+   "id": "eval_00014",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "no_code_block",
+   "question": "给定一个整数n，计算其阶乘。例如，当n=5时，输出120。",
+   "gen_excerpt": "`推理：The problem requires n=0或<`\n\n代码：\n```python\ndef factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    return n * factorial(n - 1)`"
+  },
+  {
+   "id": "eval_00017",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'process_array' is not defined",
+   "question": "Compute the sum of even numbers and their count in a list.",
+   "gen_excerpt": "推理：用内置 bin 转二进制后计数。\n\n代码：\n```python\ndef sum_even(n):\n    return sorted(a + n)\n```"
+  },
+  {
+   "id": "eval_00018",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'sum_array' is not defined",
+   "question": "给定一个整数数组，计算其中所有元素的和。",
+   "gen_excerpt": "``python\n\n代码：\n```python\ndef sum_even_numbers(lst):\n    return sum(x for x in lst if x % 2 == 0)\n```"
+  },
+  {
+   "id": "eval_00019",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'find_top_k' is not defined",
+   "question": "给定一个整数数组，找出其中最大的k个元素。输入是数组和k，输出是最大的k个元素。",
+   "gen_excerpt": "推理：本题使用位运算解决，通过遍历数组并比较数组的元素，判断是否为k个元素，直到n为0。时间复杂度O(m+n)，空间复杂度O(1)。关键步骤是初始化空数组，遍历数组，判断n为k个元素。\n\n代码：\n```python\ndef is_power_of_two(n):\n    if n == 0:\n        return 0\n    return n > 0\n    return n ^ (1 <"
+  },
+  {
+   "id": "eval_00020",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "no_code_block",
+   "question": "计算两个整数的乘积。",
+   "gen_excerpt": "\n：\n：         的总和是 0.251\n\n时间表\n：                                                                                                                                                                          "
+  },
+  {
+   "id": "eval_00021",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "no_code_block",
+   "question": "给定一个整数数组，统计其中大于等于5且小于10的元素的个数。输入是一个整数数组，输出是符合条件元素的个数。",
+   "gen_excerpt": "````: ‘We need to create a function that takes a function that takes a function that takes a function with no input() calls. The code is a pure function that takes a function that takes a function tha"
+  },
+  {
+   "id": "eval_00022",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'count_chars' is not defined. Did you mean: 'count_characters'?",
+   "question": "给定一个字符串，统计每个字符出现的次数，并返回一个字典。例如，输入\"hello\"，输出{'h':1, 'e':1, 'l':2, 'o':1}。",
+   "gen_excerpt": "推理：本题使用哈希表（字典）来记录字符出现的次数。遍历字符串中的每个字符，通过字典的get方法获取当前字符的计数，然后增加1。时间复杂度为O(n)，空间复杂度为O(k)，其中n是字符串长度，k是不同字符的数量。\n\n代码：\n```python\ndef count_characters(s):\n    counts = {}\n    for char in s:\n        counts[char"
+  },
+  {
+   "id": "eval_00023",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid syntax",
+   "question": "统计数组中数字1出现的次数。输入是一个整数数组，输出该数组中数字1的个数。",
+   "gen_excerpt": "`推理：本题使用贪心算法，按位与操作计算贪心算法，每次乘以数字2。\n\n代码：\n```python``python\ndef count_elements(lst):\n    count = 0\n    for x in lst:\n        if x % 2 == 0:\n            count += 1\n    return count\n```"
+  },
+  {
+   "id": "eval_00024",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'sort_and_check' is not defined",
+   "question": "给定一个整数数组，将其排序后，判断所有相邻元素的差值是否都大于等于5。如果满足，返回True，否则返回False。",
+   "gen_excerpt": "``python\n代码：\n```python\ndef sum_even_numbers(lst):\n    return sum(x for x in lst if x % 2 == 0)\n```"
+  },
+  {
+   "id": "eval_00026",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid character '：' (U+FF1A)",
+   "question": "计算给定整数n的阶乘。输入n，输出n!的值。例如，输入3，输出6；输入0，输出1。",
+   "gen_excerpt": "```python\n\n代码：\n```python\ndef factorial(n):\n    if n == 0:\n        return 1\n    return n * factorial(n - 1)\n```"
+  },
+  {
+   "id": "eval_00028",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid syntax",
+   "question": "合并两个有序数组，输入是两个有序数组，输出合并后的有序数组。",
+   "gen_excerpt": "`推理：`We need to create a function that takes the function that iterates through each element, check if it's even using the correctness of the function. This approach ensures that the function will not"
+  },
+  {
+   "id": "eval_00030",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|AssertionError",
+   "question": "给定一个整数列表，返回每个整数出现的次数字典。",
+   "gen_excerpt": "`推理：本题使用贪心策略，对每个元素进行计数累加。算法时间复杂度为O(n)，空间复杂度为O(1)。\n\n代码：\n```python\ndef count_elements(lst):\n    count = 0\n    for num in lst:\n        if num % 2 == 0:\n            count += 1\n    return count\n```"
+  },
+  {
+   "id": "eval_00031",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid syntax",
+   "question": "给定一组活动的开始和结束时间，选择尽可能多的不重叠的活动，输出数量。",
+   "gen_excerpt": "``python\n终止步骤：`python\n\n代码：\n```python\ndef flip_bit(n, k):\n    if n == 0:\n        return 1\n    else:\n        return n >>>= 1\n    for i in range(1, len(n)):\n        if n % i == 0:\n           return False"
+  },
+  {
+   "id": "eval_00032",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'count_even_numbers' is not defined",
+   "question": "给定一个整数数组，统计其中偶数的个数，并返回这个个数。输入是一个数组，输出是偶数的个数。例如，输入[1,2,3,4]，输出是2。",
+   "gen_excerpt": "推理：本题使用贪心算法，通过遍历数组中的每个元素，判断是否为偶数，统计符合条件的元素数量。算法复杂度为O(n)，空间复杂度为O(1)。关键步骤是遍历数组，判断奇偶性。\n\n代码：\n```python\ndef count_even(arr):\n    count = 0\n    for num in arr:\n        if num % 2 == 0:\n            count += "
+  },
+  {
+   "id": "eval_00033",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "no_code_block",
+   "question": "Calculate the sum of all even numbers in a given list of integers.",
+   "gen_excerpt": "()````"
+  },
+  {
+   "id": "eval_00034",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "no_code_block",
+   "question": "给定一个整数数组，将数组排序后判断是否有相邻两个元素的差值为1。",
+   "gen_excerpt": "`推理：本题使用贪心策略，通过维护每个元素是否为相邻元素，直到数组中每个元素是否为相邻元素。时间复杂度O(n)，空间复杂度O(n)。\n\n代码：\n```python\ndef max_difference(nums):\n    if n == 0:\n        return 0\n    return n * factorial(n - 1)`upper()`upper()`"
+  },
+  {
+   "id": "eval_00035",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid character '：' (U+FF1A)",
+   "question": "Given an array of integers, return the sum of all elements and the count of even",
+   "gen_excerpt": "()`````[1]\n\n代码：\n````python\ndef sum_even_numbers(lst):\n    return sum(num for i in range(1, n+1):\n        return n-1) == sum(num for i in range(2, n+1):\n        return n-1) == sum(num for j in lst if n"
+  },
+  {
+   "id": "eval_00036",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid syntax",
+   "question": "统计字符串中每个字符出现的次数，返回一个字典形式的哈希表。",
+   "gen_excerpt": "\n\n代码：\n````python\ndef count_characters(s):\n    counts = {}\n    for c in s:\n        counts[c] = counts.get(c, 0) + 1\n    return counts\n```"
+  },
+  {
+   "id": "eval_00037",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "no_code_block",
+   "question": "合并两个有序数组为一个有序数组",
+   "gen_excerpt": "\n\n代码：\n````python\ndef capitalize_words(s):\n    n = {}\n    for x in s:\n        n & ( n & ( n & ( n - 1)))\n    return n - 1\n    return n - 1\n    return n - 1\n    return n - 1\n    return n - 1\n    return "
+  },
+  {
+   "id": "eval_00038",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'compare_lists' is not defined",
+   "question": "判断两个列表是否按相同顺序排列。例如，输入列表a=[1,2,3]，列表b=[1,2,3]，输出True；如果列表b是[1,3,2]，输出False。",
+   "gen_excerpt": "推理：本题使用双指针法解决，通过将两个列表合并为一个列表，然后将两个列表合并为一个列表，然后将两个列表合并为一个列表。时间复杂度为O(n)，空间复杂度为O(n)。关键步骤是直接返回结果的列表和结果。\n\n代码：\n```python\ndef is_sorted_list(lst):\n    return all(lst[i] < lst[i + 1] for i in range(len(lst) -"
+  },
+  {
+   "id": "eval_00040",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'count_frequency' is not defined",
+   "question": "给定一个整数数组，统计每个数字出现的次数，并返回一个字典。",
+   "gen_excerpt": "`推理：本题使用贪心算法，按数字出现次数组数，统计次数组中每个数字的出现次数。时间复杂度为O(n)，空间复杂度为O(k)，其中n是数组长度。\n\n代码：\n```python\ndef count_occurrences(arr):\n    counts = {}\n    for num in arr:\n        if num in counts:\n            counts[num] "
+  },
+  {
+   "id": "eval_00041",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'convert_to_upper_without_spaces' is not defined",
+   "question": "给定一个字符串，将其所有字符转换为大写，并去除所有空格。",
+   "gen_excerpt": " | ``python\n\n代码：\n```python\ndef convert_to_ascii(s):\n    return [ord(c) for c in s]\n```"
+  },
+  {
+   "id": "eval_00043",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid syntax",
+   "question": "统计数组中元素x出现的次数",
+   "gen_excerpt": "枚元\n\n代码：\n````python\ndef count_digits(n):\n    return len(str(n))\n```"
+  },
+  {
+   "id": "eval_00044",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'remove_duplicates' is not defined",
+   "question": "给定一个升序排列的数组，删除重复项，返回删除后的数组。",
+   "gen_excerpt": "`推理：本题使用升序排列的数组元素来记录已出现元素。算法时间复杂度为O(n)，空间复杂度为O(n)。\n\n代码：\n```python\ndef remove_duplicates_sorted_array(sorted):\n    if not out or out[-1]:\n        return out[-2]\n```"
+  },
+  {
+   "id": "eval_00045",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'sum_array' is not defined",
+   "question": "给定一个整数数组，计算并返回其所有元素的总和。",
+   "gen_excerpt": "`推理：本题使用贪心策略，对每个元素进行排序，然后遍历数组中的每个元素，累加计数器。\n\n代码：\n```python\ndef sum_even_numbers(lst):\n    return sum(num for x in lst if x % 2 == 0)\n```"
+  },
+  {
+   "id": "eval_00047",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "no_code_block",
+   "question": "将输入的字符串中的每个单词的首字母大写，其余字母小写。",
+   "gen_excerpt": "``[str] 1st edge(s):\n    return s.get(`) '1', '1', '1', '1', '1', '1', '1', '2', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1',"
+  },
+  {
+   "id": "eval_00048",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|AssertionError",
+   "question": "将输入字符串中的每个字符转换为其对应的ASCII码，并用空格分隔输出。",
+   "gen_excerpt": "`推理：`We need to create a function that takes an empty list of the number of times. The solution is a pure function that takes an empty list, and the tests are not inputting the pure function.\n\n代码：\n```"
+  },
+  {
+   "id": "eval_00049",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'process_string' is not defined",
+   "question": "将字符串中的每个单词的首字母大写，其余字符小写。",
+   "gen_excerpt": "``python\n\n代码：\n```python\ndef capitalize_words(s):\n    return ' '.join(w[:1].upper() + w[1:] for w in s.split())\n```"
+  },
+  {
+   "id": "eval_00050",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid syntax",
+   "question": "合并两个有序数组为一个有序数组。输入是两个有序数组，输出是合并后的有序数组。",
+   "gen_excerpt": "`推理：`The problem requires traversing the function that allows them to use a function that they are not input and accumulate. This approach is a pure function that takes an empty list, which takes an e"
+  },
+  {
+   "id": "eval_00052",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'sort_list' is not defined",
+   "question": "给定一个整数列表，将其按升序排序并返回排序后的列表。输入为列表，输出为排序后的列表。",
+   "gen_excerpt": "\n代码：\n```python\ndef merge(a, b):\n    return sorted(a + b)\n```"
+  },
+  {
+   "id": "eval_00053",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'count_chars' is not defined. Did you mean: 'count_characters'?",
+   "question": "给定一个字符串，统计每个字符（包括大小写）出现的次数，返回一个字典。",
+   "gen_excerpt": "`推理：本题使用哈希表（字典）来记录字符的计数，遍历字符串中的每个字符，通过字典的get方法获取当前字符的计数，然后增加1。时间复杂度O(n)，空间复杂度O(k)，其中n是字符串长度，k是不同字符的数量。\n\n代码：\n```python\ndef count_characters(s):\n    counts = {}\n    for char in s:\n        counts[char] ="
+  },
+  {
+   "id": "eval_00054",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'count_most_frequent' is not defined",
+   "question": "给定一个字符串，统计每个字符出现的次数，并返回出现次数最多的字符。如果有多个，返回所有。",
+   "gen_excerpt": "推理：本题使用哈希表（字典）来记录字符出现的次数。通过遍历字符串中的每个字符，使用字典的get方法获取当前字符的计数，然后增加1。时间复杂度为O(n)，空间复杂度为O(k)，其中n是字符串长度，k是不同字符的数量。关键步骤是初始化空字典，遍历字符串并更新计数。\n\n代码：\n```python\ndef count_characters(s):\n    counts = {}\n    for char "
+  },
+  {
+   "id": "eval_00055",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|RecursionError: maximum recursion depth exceeded",
+   "question": "计算n的阶乘，若n为负数返回1，否则返回n的阶乘。",
+   "gen_excerpt": "`推理：推理：本题要求计算阶乘的递归函数，采用递归解决，通过递归调用计算阶乘。时间复杂度O(n)，空间复杂度O(n)。\n\n代码：\n```python\ndef factorial(n):\n    if n == 0:\n        return 1\n    else:\n        return n * factorial(n - 1)\n```"
+  },
+  {
+   "id": "eval_00056",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid character '：' (U+FF1A)",
+   "question": "Count the number of set bits in a given integer.",
+   "gen_excerpt": "()`````python\n\n代码：\n````python\ndef count_words(s):\n    return s.replace(' ', '')\n```"
+  },
+  {
+   "id": "eval_00057",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|IndentationError: unindent does not match any outer indentation level",
+   "question": "给定一个单链表，反转链表中的每个节点的值。例如，输入1->2->3->4，输出4->3->2->1。",
+   "gen_excerpt": "推理：本题使用双指针法解决，通过将两个指针分别指向两个指针的指针，将两个指针合并为两个指针，最后将两个指针合并。时间复杂度为O(m+n)，空间复杂度为O(m+n)。关键步骤是利用两个指针连接两个指针，将两个指针合并。\n\n代码：\n```python\ndef remove_duplicates(lst):\n    seen = {}\n    for x in lst:\n        if x in "
+  },
+  {
+   "id": "eval_00058",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'factor_sum' is not defined",
+   "question": "给定一个正整数n，计算其所有因数的和。",
+   "gen_excerpt": "``python\n\n代码：\n```python\ndef factorial(n):\n    if n == 0:\n        return 1\n    return n * factorial(n - 1)\n```"
+  },
+  {
+   "id": "eval_00059",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid character '：' (U+FF1A)",
+   "question": "Count the number of 1s in the binary representation of a non-negative integer.",
+   "gen_excerpt": "推理：用内置的代码，````python``python``python``python\n\n代码：\n````python`python\ndef count_words(s):\n    counts = {}\n    for char in s:\n        if char in s:\n            counts[w] = counts.get(w, 0) + 1\n    return"
+  },
+  {
+   "id": "eval_00060",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'n' is not defined",
+   "question": "判断给定的字符串是否是回文。输入是一个字符串，输出布尔值。",
+   "gen_excerpt": "`推理：本题使用递归方法解决，递归函数通过base case（nums1, n+1）和递归调用计算。时间复杂度为O(n)，空间复杂度为O(n)。\n\n代码：\n```python\ndef is_palindrome(s):\n    if n == 0:\n        return 1\n    return n * factorial(n - 1)\n```"
+  },
+  {
+   "id": "eval_00061",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'sum_list' is not defined",
+   "question": "Sum of a list of integers",
+   "gen_excerpt": "枚弹弹。\n\n代码：\n```python\ndef sum_even_numbers(lst):\n    return sum(num for x in lst if x % 2 == 0)\n```"
+  },
+  {
+   "id": "eval_00062",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "timeout",
+   "question": "给定一个整数n，返回其二进制表示中1的个数。",
+   "gen_excerpt": "`推理：本题使用位运算统计2的个数。算法选择为循环，时间复杂度O(log n)，空间复杂度O(1)。关键步骤是初始化结果为1，然后从1到n，每次将1乘以1的个数。\n\n代码：\n```python\ndef count_ones(n):\n    count = 0\n    while n:\n        if n & 1:\n            count += 1\n    return count"
+  },
+  {
+   "id": "eval_00063",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'maxNonOverlapping' is not defined",
+   "question": "给定一组区间，每个区间有开始和结束时间，选择最多的不重叠区间数量。",
+   "gen_excerpt": "推理：本题使用贪心策略，按区间结束时间排序后依次选择最远可达位置，时间复杂度为O(n)，空间复杂度为O(1)。关键步骤是初始化空数为0，然后遍历中每个区间，每次与区间进行比较。\n\n代码：\n```python\ndef max_difference(lst):\n    return max(lst) - min(lst) if lst else 0\n```"
+  },
+  {
+   "id": "eval_00064",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'calculate_even_stats' is not defined",
+   "question": "Given an array of integers, return a tuple with the sum and count of even number",
+   "gen_excerpt": "枚(1, n) ^ 自动按空白切分并合并连续空格，再逐词计数。\n\n代码：\n```python\ndef convert_to_upper_without_equal_arrangements(lst):\n    result = []\n    for x in lst:\n        if x % 2 == 0:\n            result.append(x)\n        else:"
+  },
+  {
+   "id": "eval_00065",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|UnboundLocalError: cannot access local variable 'num' where it is not associated with a value",
+   "question": "计算一个整数的二进制表示中1的个数。",
+   "gen_excerpt": "`推理：本题使用位运算统计2的个数。算法选择为循环，时间复杂度O(log n)，空间复杂度O(1)。关键步骤是初始化空数为1，然后从1到n，每次将1的个数相加。\n\n代码：\n```python\ndef count_ones(n):\n    count = 0\n    while num > 0:\n        if num & 1:\n            count += 1\n        n"
+  },
+  {
+   "id": "eval_00066",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'is_equal_min_max' is not defined",
+   "question": "给定一个整数数组，将数组排序后判断其中最小的元素是否等于最大的元素，并且数组长度大于等于2。",
+   "gen_excerpt": "推理：本题需要遍历数组中的每个元素，判断是否大于等于2，统计时间复杂度为O(n)，空间复杂度为O(1)。关键步骤是遍历数组并判断当前元素是否为 bin(n)，然后对结果取最大化。\n\n代码：\n```python\ndef calculate_product(n):\n    total = 0\n    for num in nums:\n        if num % 2 == 0:\n         "
+  },
+  {
+   "id": "eval_00069",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|AssertionError",
+   "question": "将输入字符串中的每个字符转换为其对应的ASCII码，并用空格分隔。例如，输入\"abc\"，输出\"97 98 99\"。",
+   "gen_excerpt": "推理：本题使用双指针法解决，通过将字符串中的每个字符转换为对应的ASCII码，然后用空格连接成结果字符串。算法选择为遍历字符串，时间复杂度O(n)，空间复杂度O(n)。关键步骤是遍历每个字符并转换其ASCII码。\n\n代码：\n```python\ndef convert_to_ascii(s):\n    return ''.join([str(ord(c)) for c in s])\n```"
+  },
+  {
+   "id": "eval_00070",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|AssertionError",
+   "question": "给定两个有序数组，合并后返回一个新的有序数组。输入是两个数组，输出是合并后的数组。",
+   "gen_excerpt": "`推理：推理：本题使用双指针法解决，通过将相邻两两比较，最后用相邻两两比较。时间复杂度O(m+n)，空间复杂度O(m+n)。\n\n代码：\n```python\ndef merge_two_sorted_arrays(a, b):\n    i = j = 0\n    while i < len(a) and j < len(b):\n        if a[i] < b[j]:\n            "
+  },
+  {
+   "id": "eval_00071",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'count_chars' is not defined. Did you mean: 'count_characters'?",
+   "question": "统计字符串中每个字符出现的次数，返回字典。",
+   "gen_excerpt": "`推理：本题使用哈希表（字典）来记录字符的出现次数。通过遍历字符串中的每个字符，将字符的计数器加一。时间复杂度O(n)，空间复杂度O(k)，其中n是字符串长度，k是不同字符的数量。\n\n代码：\n```python\ndef count_characters(s):\n    counts = {}\n    for char in s:\n        counts[char] = counts.get("
+  },
+  {
+   "id": "eval_00072",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "no_code_block",
+   "question": "Count the frequency of each word in a given sentence using a hashmap (dictionary",
+   "gen_excerpt": "推理：The task requires counting words)  if it is, and the tests will not compute the vowels. The solution uses a string to replace the count, which can be efficiently done using the counts. We'll test t"
+  },
+  {
+   "id": "eval_00073",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'factor_sum' is not defined",
+   "question": "给定一个正整数n，计算其所有因数的和。输入输出示例：输入5，输出6；输入6，输出12；输入1，输出1。",
+   "gen_excerpt": "推理：本题使用递归解决，通过递归分解问题，当n为0或1时返回1，否则返回n乘以factorial(n-1)。时间复杂度O(n)，空间复杂度O(n)。\n\n代码：\n```python\ndef factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    else:\n        return n * factorial(n - 1)\n```"
+  },
+  {
+   "id": "eval_00074",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'count_even' is not defined",
+   "question": "给定一个整数数组，统计其中偶数的个数，并返回。",
+   "gen_excerpt": "``python\n\n代码：\n```python\ndef count_words(s):\n    return s.replace(' ', '')\n```"
+  },
+  {
+   "id": "eval_00076",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'reverse_linked_list' is not defined",
+   "question": "给定一个单链表，反转其中的每一个节点，并返回反转后的链表的头节点。",
+   "gen_excerpt": "推理：本题使用双指针法，将节点右移到前端，将前端指向前端，再逐个节点右移。\n\n代码：\n```python\ndef factorial(n):\n    if n == 0:\n        return 1\n    else:\n        return n * factorial(n - 1)\n```"
+  },
+  {
+   "id": "eval_00077",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'is_all_equal' is not defined",
+   "question": "给定一个整数数组，判断其排序后是否所有元素都相等。",
+   "gen_excerpt": "`推理：本题要求实现排序后是否使用排序后的列表即可。算法时间复杂度为O(n log n)，因为排序的复杂度是关键步骤是排序后的结果。\n\n代码：\n```python\ndef is_sorted_equal(lst):\n    return sum(x for x in lst if x % 2 == 0)\n```"
+  },
+  {
+   "id": "eval_00078",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid syntax",
+   "question": "Count the occurrences of each element in a list using a hashmap (dictionary).",
+   "gen_excerpt": "推理： 第二个字典为  dictionary.\n\n代码：\n````python\ndef count_dictionary(s):\n    counts = {}\n    for c in s:\n        counts[c] = counts.get(c, 0) + 1\n    return counts\n```"
+  },
+  {
+   "id": "eval_00079",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'fib' is not defined",
+   "question": "给定一个数列，其中每个元素是前两个元素的和，初始条件为f(0)=0，f(1)=1。给定n，求f(n)的值。",
+   "gen_excerpt": "推理：本题使用递归方法解决，通过递归调用计算n的值，然后对每个元素进行除法运算。递归函数需要处理基本情况（如n=0或n=1时返回1），否则返回结果。时间复杂度为O(n)，空间复杂度为O(1)。关键步骤是正确处理n的情况，以及递归调用。\n\n代码：\n```python\ndef factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    els"
+  },
+  {
+   "id": "eval_00080",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|TypeError: sequence item 0: expected str instance, list found",
+   "question": "将字符串中的每个单词的首字母大写，其余字母小写，单词之间保持原样。",
+   "gen_excerpt": "`推理：`We need to create a word input() calls，numbersword, or winterword. This approach is a pure function that takes an empty list of the purest set. The tests verify the method that iterates through e"
+  },
+  {
+   "id": "eval_00081",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "timeout",
+   "question": "给定一个整数n，返回其二进制表示中1的个数。例如，n=5（二进制101）的输出为2。",
+   "gen_excerpt": "推理：本题使用位运算解决，通过循环将n与n-1进行与运算，每次将n与n-1进行与运算，直到n为0或1。时间复杂度O(log n)，空间复杂度O(1)。关键步骤是正确处理位和操作。\n\n代码：\n```python\ndef count_ones(n):\n    count = 0\n    while n:\n        if n & 1:\n            count += 1\n    retu"
+  },
+  {
+   "id": "eval_00082",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'fib' is not defined",
+   "question": "计算斐波那契数列的第n项（n≥0），输入n，输出对应值。",
+   "gen_excerpt": "``python\n\n代码：\n```python\ndef flip_bit(n, k):\n    return n ^ (1 << k)\n```"
+  },
+  {
+   "id": "eval_00083",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'stats_array' is not defined",
+   "question": "给定一个整数数组，统计其中的元素数量、总和、最大值和最小值，并返回结果。",
+   "gen_excerpt": "`推理：本题使用贪心算法，按结束时间排序后依次选择不重叠到数组中。算法复杂度为O(n)，关键步骤是遍历数组并统计数量。\n\n代码：\n```python\ndef count_elements(lst):\n    count = 0\n    for num in lst:\n        if num % 2 == 0:\n            count += 1\n    return count\n`"
+  },
+  {
+   "id": "eval_00084",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid syntax",
+   "question": "给定一个单链表，反转链表并返回新链表的头节点。",
+   "gen_excerpt": "推理：\n（代码：\n````python\ndef factorial(n):\n    if n == 0:\n        return 1\n    else:\n        return n * factorial(n - 1)\n```"
+  },
+  {
+   "id": "eval_00086",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid character '。' (U+3002)",
+   "question": "给定一个整数数组，将其排序后判断是否所有元素都是严格递增的。如果满足条件，返回True，否则返回False。",
+   "gen_excerpt": "推理：本题使用贪心算法，通过对每个元素进行排序后依次选择排序后的列表，排序后依次选择排序后的列表，直接排序后依次选择排序后的列表。时间复杂度为O(n log n)，空间复杂度为O(1)。\n\n代码：\n```python\ndef max_difference(nums):\n    if nums:\n        return False\n    i = 1\n    while i < len(num"
+  },
+  {
+   "id": "eval_00087",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'maxNonOverlappingIntervals' is not defined",
+   "question": "给定一组时间区间，每个区间表示一个活动的开始和结束时间，要求选择尽可能多的不重叠的活动。",
+   "gen_excerpt": "`推理：`We need to create a list of the `We need to create it. If it is, we'll iterate through each element, check if it's even using a string to remove it. The solution is efficient and handles all edge"
+  },
+  {
+   "id": "eval_00090",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "no_code_block",
+   "question": "Count the frequency of each word in a given sentence using a hashmap.",
+   "gen_excerpt": "枚（, ），                                                                                                                                                                                                  "
+  },
+  {
+   "id": "eval_00091",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'flip_bit' is not defined",
+   "question": "给定一个整数n和一个位位置pos，返回将该位翻转后的结果。",
+   "gen_excerpt": "\n前鋒，鋒的替换，是前鋒的終極動員。\n\n代码：\n```python\ndef merge(n):\n    return n * (n & 1)\n```"
+  },
+  {
+   "id": "eval_00092",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|TypeError: 'int' object is not iterable",
+   "question": "Given an integer n, return the sum of the first n even numbers.",
+   "gen_excerpt": "推理：The task requires traversing a number to reverse n in summing cases like a dictionary. The solution is a pure function that takes a list of 1 项. The tests verify the correctness for each element, c"
+  },
+  {
+   "id": "eval_00093",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'count_elements' is not defined",
+   "question": "统计列表中每个元素出现的次数，返回字典形式的计数结果。",
+   "gen_excerpt": " 用字典逐字符计数，时间复杂度 O(n)。\n\n代码：\n```python\ndef count_frequencies(lst):\n    d = {}\n    for x in lst:\n        d[x] = d.get(x, 0) + 1\n    return d\n```"
+  },
+  {
+   "id": "eval_00095",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'fib' is not defined",
+   "question": "给定一个整数n，返回斐波那契数列的第n项。",
+   "gen_excerpt": " 切片反转列表，即可。\n\n代码：\n```python\ndef multiply(a, b):\n    return a * b\n```"
+  },
+  {
+   "id": "eval_00096",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'flip_bits' is not defined",
+   "question": "Given a number and a mask, return the number with the bits where the mask has 1s",
+   "gen_excerpt": "推理：The problem requires processing a number to reach the mask. The solution is a pure function that takes a number to the mask. The base case is a pure function that takes an integer n and returns the"
+  },
+  {
+   "id": "eval_00097",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'num' is not defined. Did you mean: 'sum'?",
+   "question": "Calculate the sum of all even numbers in a list.",
+   "gen_excerpt": "推理：用 sum(1) 即可。\n\n代码：\n```python\ndef sum_even_numbers(lst):\n    return sum(num for x in lst if x % 2 == 0)\n```"
+  },
+  {
+   "id": "eval_00098",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'count_elements' is not defined",
+   "question": "Count the frequency of elements in a list using a hashmap.",
+   "gen_excerpt": "推理：用字典逐字符计数。\n\n代码：\n```python\ndef count_characters(s):\n    counts = {}\n    for c in s:\n        counts[c] = counts.get(c, 0) + 1\n    return counts\n```"
+  },
+  {
+   "id": "eval_00099",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'count_words' is not defined",
+   "question": "Count the frequency of each word in a sentence.",
+   "gen_excerpt": "推理：The task requires counting words to handle edge cases like empty lists and lists with no inputdictionary. We'll use a dictionary to track counts for empty lists and lists with no inputdictionary. T"
+  }
+ ],
+ "per_item": [
+  {
+   "id": "eval_00000",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|IndentationError: unindent does not match any outer indentation level",
+   "gen_tokens": 189.0,
+   "gen_chars": 424.0
+  },
+  {
+   "id": "eval_00001",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'count_ways' is not defined",
+   "gen_tokens": 58.0,
+   "gen_chars": 90.0
+  },
+  {
+   "id": "eval_00002",
+   "pass": true,
+   "n_pass_samples": 1,
+   "samples": 1,
+   "reason": "pass",
+   "gen_tokens": 122.0,
+   "gen_chars": 191.0
+  },
+  {
+   "id": "eval_00003",
+   "pass": true,
+   "n_pass_samples": 1,
+   "samples": 1,
+   "reason": "pass",
+   "gen_tokens": 154.0,
+   "gen_chars": 227.0
+  },
+  {
+   "id": "eval_00004",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "timeout",
+   "gen_tokens": 129.0,
+   "gen_chars": 201.0
+  },
+  {
+   "id": "eval_00005",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'count_chars' is not defined. Did you mean: 'count_characters'?",
+   "gen_tokens": 144.0,
+   "gen_chars": 198.0
+  },
+  {
+   "id": "eval_00006",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid character '：' (U+FF1A)",
+   "gen_tokens": 69.0,
+   "gen_chars": 110.0
+  },
+  {
+   "id": "eval_00007",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "no_code_block",
+   "gen_tokens": 539.0,
+   "gen_chars": 517.0
+  },
+  {
+   "id": "eval_00008",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid syntax",
+   "gen_tokens": 104.0,
+   "gen_chars": 146.0
+  },
+  {
+   "id": "eval_00009",
+   "pass": true,
+   "n_pass_samples": 1,
+   "samples": 1,
+   "reason": "pass",
+   "gen_tokens": 128.0,
+   "gen_chars": 195.0
+  },
+  {
+   "id": "eval_00010",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "no_code_block",
+   "gen_tokens": 31.0,
+   "gen_chars": 15.0
+  },
+  {
+   "id": "eval_00011",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'count_characters' is not defined. Did you mean: 'count_chars'?",
+   "gen_tokens": 136.0,
+   "gen_chars": 184.0
+  },
+  {
+   "id": "eval_00012",
+   "pass": true,
+   "n_pass_samples": 1,
+   "samples": 1,
+   "reason": "pass",
+   "gen_tokens": 120.0,
+   "gen_chars": 181.0
+  },
+  {
+   "id": "eval_00013",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid syntax",
+   "gen_tokens": 146.0,
+   "gen_chars": 209.0
+  },
+  {
+   "id": "eval_00014",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "no_code_block",
+   "gen_tokens": 83.0,
+   "gen_chars": 139.0
+  },
+  {
+   "id": "eval_00015",
+   "pass": true,
+   "n_pass_samples": 1,
+   "samples": 1,
+   "reason": "pass",
+   "gen_tokens": 146.0,
+   "gen_chars": 312.0
+  },
+  {
+   "id": "eval_00016",
+   "pass": true,
+   "n_pass_samples": 1,
+   "samples": 1,
+   "reason": "pass",
+   "gen_tokens": 141.0,
+   "gen_chars": 205.0
+  },
+  {
+   "id": "eval_00017",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'process_array' is not defined",
+   "gen_tokens": 66.0,
+   "gen_chars": 80.0
+  },
+  {
+   "id": "eval_00018",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'sum_array' is not defined",
+   "gen_tokens": 71.0,
+   "gen_chars": 99.0
+  },
+  {
+   "id": "eval_00019",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'find_top_k' is not defined",
+   "gen_tokens": 147.0,
+   "gen_chars": 212.0
+  },
+  {
+   "id": "eval_00020",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "no_code_block",
+   "gen_tokens": 559.0,
+   "gen_chars": 516.0
+  },
+  {
+   "id": "eval_00021",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "no_code_block",
+   "gen_tokens": 531.0,
+   "gen_chars": 2205.0
+  },
+  {
+   "id": "eval_00022",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'count_chars' is not defined. Did you mean: 'count_characters'?",
+   "gen_tokens": 151.0,
+   "gen_chars": 249.0
+  },
+  {
+   "id": "eval_00023",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid syntax",
+   "gen_tokens": 140.0,
+   "gen_chars": 180.0
+  },
+  {
+   "id": "eval_00024",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'sort_and_check' is not defined",
+   "gen_tokens": 62.0,
+   "gen_chars": 98.0
+  },
+  {
+   "id": "eval_00025",
+   "pass": true,
+   "n_pass_samples": 1,
+   "samples": 1,
+   "reason": "pass",
+   "gen_tokens": 159.0,
+   "gen_chars": 214.0
+  },
+  {
+   "id": "eval_00026",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid character '：' (U+FF1A)",
+   "gen_tokens": 77.0,
+   "gen_chars": 110.0
+  },
+  {
+   "id": "eval_00027",
+   "pass": true,
+   "n_pass_samples": 1,
+   "samples": 1,
+   "reason": "pass",
+   "gen_tokens": 167.0,
+   "gen_chars": 269.0
+  },
+  {
+   "id": "eval_00028",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid syntax",
+   "gen_tokens": 189.0,
+   "gen_chars": 500.0
+  },
+  {
+   "id": "eval_00029",
+   "pass": true,
+   "n_pass_samples": 1,
+   "samples": 1,
+   "reason": "pass",
+   "gen_tokens": 122.0,
+   "gen_chars": 187.0
+  },
+  {
+   "id": "eval_00030",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|AssertionError",
+   "gen_tokens": 140.0,
+   "gen_chars": 192.0
+  },
+  {
+   "id": "eval_00031",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid syntax",
+   "gen_tokens": 162.0,
+   "gen_chars": 235.0
+  },
+  {
+   "id": "eval_00032",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'count_even_numbers' is not defined",
+   "gen_tokens": 144.0,
+   "gen_chars": 222.0
+  },
+  {
+   "id": "eval_00033",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "no_code_block",
+   "gen_tokens": 36.0,
+   "gen_chars": 6.0
+  },
+  {
+   "id": "eval_00034",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "no_code_block",
+   "gen_tokens": 138.0,
+   "gen_chars": 188.0
+  },
+  {
+   "id": "eval_00035",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid character '：' (U+FF1A)",
+   "gen_tokens": 339.0,
+   "gen_chars": 585.0
+  },
+  {
+   "id": "eval_00036",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid syntax",
+   "gen_tokens": 116.0,
+   "gen_chars": 136.0
+  },
+  {
+   "id": "eval_00037",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "no_code_block",
+   "gen_tokens": 557.0,
+   "gen_chars": 1057.0
+  },
+  {
+   "id": "eval_00038",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'compare_lists' is not defined",
+   "gen_tokens": 131.0,
+   "gen_chars": 208.0
+  },
+  {
+   "id": "eval_00039",
+   "pass": true,
+   "n_pass_samples": 1,
+   "samples": 1,
+   "reason": "pass",
+   "gen_tokens": 158.0,
+   "gen_chars": 218.0
+  },
+  {
+   "id": "eval_00040",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'count_frequency' is not defined",
+   "gen_tokens": 177.0,
+   "gen_chars": 268.0
+  },
+  {
+   "id": "eval_00041",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'convert_to_upper_without_spaces' is not defined",
+   "gen_tokens": 51.0,
+   "gen_chars": 86.0
+  },
+  {
+   "id": "eval_00042",
+   "pass": true,
+   "n_pass_samples": 1,
+   "samples": 1,
+   "reason": "pass",
+   "gen_tokens": 132.0,
+   "gen_chars": 207.0
+  },
+  {
+   "id": "eval_00043",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid syntax",
+   "gen_tokens": 56.0,
+   "gen_chars": 66.0
+  },
+  {
+   "id": "eval_00044",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'remove_duplicates' is not defined",
+   "gen_tokens": 128.0,
+   "gen_chars": 163.0
+  },
+  {
+   "id": "eval_00045",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'sum_array' is not defined",
+   "gen_tokens": 117.0,
+   "gen_chars": 135.0
+  },
+  {
+   "id": "eval_00046",
+   "pass": true,
+   "n_pass_samples": 1,
+   "samples": 1,
+   "reason": "pass",
+   "gen_tokens": 151.0,
+   "gen_chars": 249.0
+  },
+  {
+   "id": "eval_00047",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "no_code_block",
+   "gen_tokens": 542.0,
+   "gen_chars": 649.0
+  },
+  {
+   "id": "eval_00048",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|AssertionError",
+   "gen_tokens": 115.0,
+   "gen_chars": 266.0
+  },
+  {
+   "id": "eval_00049",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'process_string' is not defined",
+   "gen_tokens": 87.0,
+   "gen_chars": 114.0
+  },
+  {
+   "id": "eval_00050",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid syntax",
+   "gen_tokens": 192.0,
+   "gen_chars": 432.0
+  },
+  {
+   "id": "eval_00051",
+   "pass": true,
+   "n_pass_samples": 1,
+   "samples": 1,
+   "reason": "pass",
+   "gen_tokens": 129.0,
+   "gen_chars": 202.0
+  },
+  {
+   "id": "eval_00052",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'sort_list' is not defined",
+   "gen_tokens": 37.0,
+   "gen_chars": 60.0
+  },
+  {
+   "id": "eval_00053",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'count_chars' is not defined. Did you mean: 'count_characters'?",
+   "gen_tokens": 156.0,
+   "gen_chars": 246.0
+  },
+  {
+   "id": "eval_00054",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'count_most_frequent' is not defined",
+   "gen_tokens": 171.0,
+   "gen_chars": 274.0
+  },
+  {
+   "id": "eval_00055",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|RecursionError: maximum recursion depth exceeded",
+   "gen_tokens": 117.0,
+   "gen_chars": 174.0
+  },
+  {
+   "id": "eval_00056",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid character '：' (U+FF1A)",
+   "gen_tokens": 78.0,
+   "gen_chars": 83.0
+  },
+  {
+   "id": "eval_00057",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|IndentationError: unindent does not match any outer indentation level",
+   "gen_tokens": 199.0,
+   "gen_chars": 300.0
+  },
+  {
+   "id": "eval_00058",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'factor_sum' is not defined",
+   "gen_tokens": 89.0,
+   "gen_chars": 109.0
+  },
+  {
+   "id": "eval_00059",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid character '：' (U+FF1A)",
+   "gen_tokens": 141.0,
+   "gen_chars": 211.0
+  },
+  {
+   "id": "eval_00060",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'n' is not defined",
+   "gen_tokens": 117.0,
+   "gen_chars": 177.0
+  },
+  {
+   "id": "eval_00061",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'sum_list' is not defined",
+   "gen_tokens": 73.0,
+   "gen_chars": 97.0
+  },
+  {
+   "id": "eval_00062",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "timeout",
+   "gen_tokens": 142.0,
+   "gen_chars": 204.0
+  },
+  {
+   "id": "eval_00063",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'maxNonOverlapping' is not defined",
+   "gen_tokens": 119.0,
+   "gen_chars": 177.0
+  },
+  {
+   "id": "eval_00064",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'calculate_even_stats' is not defined",
+   "gen_tokens": 165.0,
+   "gen_chars": 251.0
+  },
+  {
+   "id": "eval_00065",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|UnboundLocalError: cannot access local variable 'num' where it is not associated with a value",
+   "gen_tokens": 169.0,
+   "gen_chars": 229.0
+  },
+  {
+   "id": "eval_00066",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'is_equal_min_max' is not defined",
+   "gen_tokens": 147.0,
+   "gen_chars": 236.0
+  },
+  {
+   "id": "eval_00067",
+   "pass": true,
+   "n_pass_samples": 1,
+   "samples": 1,
+   "reason": "pass",
+   "gen_tokens": 97.0,
+   "gen_chars": 144.0
+  },
+  {
+   "id": "eval_00068",
+   "pass": true,
+   "n_pass_samples": 1,
+   "samples": 1,
+   "reason": "pass",
+   "gen_tokens": 122.0,
+   "gen_chars": 192.0
+  },
+  {
+   "id": "eval_00069",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|AssertionError",
+   "gen_tokens": 131.0,
+   "gen_chars": 195.0
+  },
+  {
+   "id": "eval_00070",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|AssertionError",
+   "gen_tokens": 224.0,
+   "gen_chars": 299.0
+  },
+  {
+   "id": "eval_00071",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'count_chars' is not defined. Did you mean: 'count_characters'?",
+   "gen_tokens": 171.0,
+   "gen_chars": 234.0
+  },
+  {
+   "id": "eval_00072",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "no_code_block",
+   "gen_tokens": 525.0,
+   "gen_chars": 1065.0
+  },
+  {
+   "id": "eval_00073",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'factor_sum' is not defined",
+   "gen_tokens": 125.0,
+   "gen_chars": 199.0
+  },
+  {
+   "id": "eval_00074",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'count_even' is not defined",
+   "gen_tokens": 65.0,
+   "gen_chars": 77.0
+  },
+  {
+   "id": "eval_00075",
+   "pass": true,
+   "n_pass_samples": 1,
+   "samples": 1,
+   "reason": "pass",
+   "gen_tokens": 119.0,
+   "gen_chars": 149.0
+  },
+  {
+   "id": "eval_00076",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'reverse_linked_list' is not defined",
+   "gen_tokens": 118.0,
+   "gen_chars": 152.0
+  },
+  {
+   "id": "eval_00077",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'is_all_equal' is not defined",
+   "gen_tokens": 119.0,
+   "gen_chars": 156.0
+  },
+  {
+   "id": "eval_00078",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid syntax",
+   "gen_tokens": 110.0,
+   "gen_chars": 159.0
+  },
+  {
+   "id": "eval_00079",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'fib' is not defined",
+   "gen_tokens": 158.0,
+   "gen_chars": 242.0
+  },
+  {
+   "id": "eval_00080",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|TypeError: sequence item 0: expected str instance, list found",
+   "gen_tokens": 142.0,
+   "gen_chars": 348.0
+  },
+  {
+   "id": "eval_00081",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "timeout",
+   "gen_tokens": 138.0,
+   "gen_chars": 212.0
+  },
+  {
+   "id": "eval_00082",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'fib' is not defined",
+   "gen_tokens": 52.0,
+   "gen_chars": 71.0
+  },
+  {
+   "id": "eval_00083",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'stats_array' is not defined",
+   "gen_tokens": 137.0,
+   "gen_chars": 202.0
+  },
+  {
+   "id": "eval_00084",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid syntax",
+   "gen_tokens": 87.0,
+   "gen_chars": 119.0
+  },
+  {
+   "id": "eval_00085",
+   "pass": true,
+   "n_pass_samples": 1,
+   "samples": 1,
+   "reason": "pass",
+   "gen_tokens": 125.0,
+   "gen_chars": 171.0
+  },
+  {
+   "id": "eval_00086",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|SyntaxError: invalid character '。' (U+3002)",
+   "gen_tokens": 153.0,
+   "gen_chars": 240.0
+  },
+  {
+   "id": "eval_00087",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'maxNonOverlappingIntervals' is not defined",
+   "gen_tokens": 134.0,
+   "gen_chars": 336.0
+  },
+  {
+   "id": "eval_00088",
+   "pass": true,
+   "n_pass_samples": 1,
+   "samples": 1,
+   "reason": "pass",
+   "gen_tokens": 115.0,
+   "gen_chars": 170.0
+  },
+  {
+   "id": "eval_00089",
+   "pass": true,
+   "n_pass_samples": 1,
+   "samples": 1,
+   "reason": "pass",
+   "gen_tokens": 132.0,
+   "gen_chars": 207.0
+  },
+  {
+   "id": "eval_00090",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "no_code_block",
+   "gen_tokens": 515.0,
+   "gen_chars": 513.0
+  },
+  {
+   "id": "eval_00091",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'flip_bit' is not defined",
+   "gen_tokens": 53.0,
+   "gen_chars": 74.0
+  },
+  {
+   "id": "eval_00092",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|TypeError: 'int' object is not iterable",
+   "gen_tokens": 145.0,
+   "gen_chars": 426.0
+  },
+  {
+   "id": "eval_00093",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'count_elements' is not defined",
+   "gen_tokens": 93.0,
+   "gen_chars": 141.0
+  },
+  {
+   "id": "eval_00094",
+   "pass": true,
+   "n_pass_samples": 1,
+   "samples": 1,
+   "reason": "pass",
+   "gen_tokens": 123.0,
+   "gen_chars": 193.0
+  },
+  {
+   "id": "eval_00095",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'fib' is not defined",
+   "gen_tokens": 43.0,
+   "gen_chars": 67.0
+  },
+  {
+   "id": "eval_00096",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'flip_bits' is not defined",
+   "gen_tokens": 142.0,
+   "gen_chars": 378.0
+  },
+  {
+   "id": "eval_00097",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'num' is not defined. Did you mean: 'sum'?",
+   "gen_tokens": 75.0,
+   "gen_chars": 108.0
+  },
+  {
+   "id": "eval_00098",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'count_elements' is not defined",
+   "gen_tokens": 95.0,
+   "gen_chars": 147.0
+  },
+  {
+   "id": "eval_00099",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 1,
+   "reason": "runtime_error|NameError: name 'count_words' is not defined",
+   "gen_tokens": 175.0,
+   "gen_chars": 408.0
+  }
+ ]
+}

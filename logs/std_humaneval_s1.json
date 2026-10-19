@@ -1,0 +1,1336 @@
+{
+ "meta": {
+  "bench": "humaneval",
+  "ckpt": "F:\\自研大模型\\runs\\sft_v8\\final.pt",
+  "n": 164,
+  "n_pass": 0,
+  "pass_rate": 0.0,
+  "gen": {
+   "temperature": 0.2,
+   "samples": 1,
+   "top_k": 50,
+   "top_p": 0.9,
+   "rep": 1.1
+  }
+ },
+ "summary": {
+  "n_pass": 0,
+  "pass_rate": 0.0
+ },
+ "failures": [
+  {
+   "id": "HumanEval/0",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/1",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/2",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/3",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/4",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/5",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/6",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/7",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/8",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/9",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/10",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/11",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/12",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/13",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/14",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/15",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/16",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/17",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/18",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/19",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/20",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/21",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/22",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/23",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/24",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/25",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/26",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/27",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/28",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/29",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/30",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/31",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/32",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/33",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/34",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/35",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/36",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/37",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/38",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/39",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/40",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/41",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/42",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/43",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/44",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/45",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/46",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/47",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/48",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/49",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/50",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/51",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/52",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/53",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/54",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/55",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/56",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/57",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/58",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/59",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/60",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/61",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/62",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/63",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/64",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/65",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/66",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/67",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/68",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/69",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/70",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/71",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/72",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/73",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/74",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/75",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/76",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/77",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/78",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/79",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/80",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/81",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/82",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/83",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/84",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/85",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/86",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/87",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/88",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/89",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/90",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/91",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/92",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/93",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/94",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/95",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/96",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/97",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/98",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/99",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/100",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/101",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/102",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/103",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/104",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/105",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/106",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/107",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/108",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/109",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/110",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/111",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/112",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/113",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/114",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/115",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/116",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/117",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/118",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/119",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/120",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/121",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/122",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/123",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/124",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/125",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/126",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/127",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/128",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/129",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/130",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/131",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/132",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/133",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/134",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/135",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/136",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/137",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/138",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/139",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/140",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/141",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/142",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/143",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/144",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/145",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/146",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/147",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/148",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/149",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/150",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/151",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/152",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/153",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/154",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/155",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/156",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/157",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/158",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/159",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/160",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/161",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/162",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/163",
+   "pass": false
+  }
+ ],
+ "per_item": [
+  {
+   "id": "HumanEval/0",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/1",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/2",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/3",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/4",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/5",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/6",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/7",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/8",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/9",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/10",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/11",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/12",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/13",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/14",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/15",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/16",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/17",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/18",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/19",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/20",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/21",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/22",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/23",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/24",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/25",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/26",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/27",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/28",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/29",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/30",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/31",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/32",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/33",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/34",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/35",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/36",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/37",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/38",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/39",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/40",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/41",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/42",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/43",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/44",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/45",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/46",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/47",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/48",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/49",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/50",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/51",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/52",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/53",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/54",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/55",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/56",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/57",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/58",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/59",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/60",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/61",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/62",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/63",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/64",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/65",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/66",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/67",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/68",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/69",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/70",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/71",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/72",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/73",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/74",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/75",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/76",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/77",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/78",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/79",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/80",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/81",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/82",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/83",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/84",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/85",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/86",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/87",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/88",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/89",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/90",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/91",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/92",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/93",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/94",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/95",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/96",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/97",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/98",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/99",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/100",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/101",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/102",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/103",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/104",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/105",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/106",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/107",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/108",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/109",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/110",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/111",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/112",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/113",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/114",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/115",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/116",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/117",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/118",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/119",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/120",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/121",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/122",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/123",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/124",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/125",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/126",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/127",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/128",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/129",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/130",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/131",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/132",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/133",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/134",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/135",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/136",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/137",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/138",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/139",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/140",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/141",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/142",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/143",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/144",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/145",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/146",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/147",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/148",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/149",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/150",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/151",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/152",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/153",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/154",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/155",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/156",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/157",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/158",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/159",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/160",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/161",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/162",
+   "pass": false
+  },
+  {
+   "id": "HumanEval/163",
+   "pass": false
+  }
+ ]
+}

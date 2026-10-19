@@ -1,0 +1,40 @@
+# === 权重与中间态（约 17 GB，不提交；发布走 HF/Release） ===
+runs/
+*.pt
+
+# === 第三方语料与 token 缓存（许可/体积，不提交） ===
+data/*.bin
+data/*.jsonl
+!data/eval_code.jsonl
+!data/synth_code_tpl.jsonl
+!data/synth_code_tpl_seed8.jsonl
+!data/synth_code_tpl_seed9.jsonl
+!data/synth_code_v2.jsonl
+!data/synth_code_v2_seed8.jsonl
+!data/synth_code_v2_seed9.jsonl
+!data/synth_code_sft.jsonl
+!data/synth_code_sft_seed8.jsonl
+!data/synth_code_sft_seed9.jsonl
+!data/grpo_train.jsonl
+!data/grpo_hard.jsonl
+data/stdbench/
+!data/README.md
+
+# === GGUF 产物（221 MB，发布走 HF Release） ===
+out/
+!out/README.md
+
+# === 日志归档（保留 logs/ 根下的评测证据档案） ===
+logs/archive/
+
+# === 报告版本备份（只保留当前版） ===
+docs/backup/
+
+# === Python / 通用 ===
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+.DS_Store
+Thumbs.db

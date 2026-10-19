@@ -1,0 +1,8 @@
+{
+  "vocab_size": 16384,
+  "pad": 0,
+  "bos": 1,
+  "eos": 2,
+  "sep": 3,
+  "type": "byte-level BPE"
+}

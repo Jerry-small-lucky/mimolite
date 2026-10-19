@@ -1,0 +1,1323 @@
+{
+ "meta": {
+  "ckpt": "F:\\自研大模型\\runs\\sft_v8\\final.pt",
+  "data": "F:\\自研大模型\\data\\eval_code.jsonl",
+  "n_total": 100,
+  "created": "2026-10-16 21:28:08",
+  "gen": {
+   "temperature": 0.2,
+   "top_k": 50,
+   "top_p": 0.9,
+   "repetition_penalty": 1.1,
+   "max_context": 1024,
+   "max_new_tokens": 512,
+   "batch": 4,
+   "seed": 2026,
+   "samples": 8,
+   "timeout_s": 20,
+   "bf16": true
+  },
+  "device": "cuda",
+  "done": true
+ },
+ "summary": {
+  "n": 100,
+  "n_pass": 57,
+  "n_fail": 43,
+  "pass_rate": 0.57,
+  "avg_gen_tokens": 152.0,
+  "avg_gen_chars": 268.5,
+  "duration_s": 587.0
+ },
+ "failures": [
+  {
+   "id": "eval_00000",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_frequencies' is not defined",
+   "question": "Count the frequency of each element in a list.",
+   "gen_excerpt": "推理：The problem requires counting occurrences with all cases like empty lists and those that are seen by duplicates. We can use a function to reverse the list, check if it's even using modulo() for emp"
+  },
+  {
+   "id": "eval_00005",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_chars' is not defined. Did you mean: 'count_characters'?",
+   "question": "统计字符串中每个字符出现的次数，输出字典形式的结果。",
+   "gen_excerpt": "推理：本题使用哈希表（字典）来记录字符出现的频率。算法选择为遍历字符串中的每个字符，使用字典的get方法或直接赋值来记录出现次数。时间复杂度O(n)，空间复杂度O(k)，其中n是字符串长度，k是不同字符的数量。关键步骤是遍历字符串并更新字典中的计数。\n\n代码：\n```python\ndef count_characters(s):\n    counts = {}\n    for char in s:"
+  },
+  {
+   "id": "eval_00007",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'merge_sorted_arrays' is not defined. Did you mean: 'merge_two_sorted_arrays'?",
+   "question": "合并两个有序数组，返回合并后的有序数组。",
+   "gen_excerpt": "推理：拼接后排序即可。\n\n代码：\n```python\ndef merge_two_sorted_arrays(a, b):\n    return sorted(a + b)\n```"
+  },
+  {
+   "id": "eval_00008",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_char_occurrences' is not defined",
+   "question": "统计字符串中每个字符出现的次数，包括大小写和特殊字符。",
+   "gen_excerpt": "推理：本题要求使用哈希表（字典）来记录字符出现的频率。算法选择为遍历字符串中的每个字符，使用字典的get方法或直接赋值来记录出现次数。时间复杂度为O(n)，空间复杂度为O(1)。关键步骤是初始化空字典，遍历字符串并更新字典中的计数。\n\n代码：\n```python\ndef count_characters(s):\n    counts = {}\n    for char in s:\n        "
+  },
+  {
+   "id": "eval_00013",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_even_and_sum' is not defined",
+   "question": "给定一个整数数组，统计其中偶数的个数和总和。",
+   "gen_excerpt": "推理：本题需要遍历数组中的每个元素，判断是否为偶数，统计符合条件的元素数量。使用生成器表达式或列表推导式可以简洁地实现，时间复杂度为O(n)，空间复杂度为O(1)。\n\n代码：\n```python\ndef count_even(arr):\n    return sum(1 for x in arr if x % 2 == 0)\n```"
+  },
+  {
+   "id": "eval_00017",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'process_array' is not defined",
+   "question": "Compute the sum of even numbers and their count in a list.",
+   "gen_excerpt": "推理：The problem requires summing the sum of even numbers, summing the sum of even numbers and sum them. We'll use a function that takes a list of integers and sums. The solution is summing in edge case"
+  },
+  {
+   "id": "eval_00019",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "no_code_block",
+   "question": "给定一个整数数组，找出其中最大的k个元素。输入是数组和k，输出是最大的k个元素。",
+   "gen_excerpt": "推理：本题使用位运算解决，通过遍历数组并累加math.sq的值。时间复杂度O(n)，空间复杂度O(1)。关键步骤是初始化空数组，遍历数组并累加math.sq值。\n\n代码：\n```python\ndef is_power_of_two(n):\n    if n == 0:\n        return False\n    return (sums, 1):\n    return (sums, 1):\n"
+  },
+  {
+   "id": "eval_00021",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_between' is not defined",
+   "question": "给定一个整数数组，统计其中大于等于5且小于10的元素的个数。输入是一个整数数组，输出是符合条件元素的个数。",
+   "gen_excerpt": "推理：本题使用贪心算法，通过遍历数组中的每个元素，判断是否大于等于0，统计满足条件的元素数量。时间复杂度为O(n)，空间复杂度为O(1)。关键步骤是遍历数组并累加计数器。\n\n代码：\n```python\ndef count_even_numbers(arr):\n    total = 0\n    for num in arr:\n        if num % 2 == 0:\n           "
+  },
+  {
+   "id": "eval_00022",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_chars' is not defined. Did you mean: 'count_characters'?",
+   "question": "给定一个字符串，统计每个字符出现的次数，并返回一个字典。例如，输入\"hello\"，输出{'h':1, 'e':1, 'l':2, 'o':1}。",
+   "gen_excerpt": "推理：本题使用哈希表（字典）来记录字符出现的次数。通过遍历字符串中的每个字符，使用字典的get方法获取当前字符的计数，然后增加1。时间复杂度为O(n)，空间复杂度为O(k)，其中n是字符串长度，k是不同字符的数量。\n\n代码：\n```python\ndef count_characters(s):\n    counts = {}\n    for char in s:\n        counts[ch"
+  },
+  {
+   "id": "eval_00023",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_one_occurrences' is not defined",
+   "question": "统计数组中数字1出现的次数。输入是一个整数数组，输出该数组中数字1的个数。",
+   "gen_excerpt": "推理：本题使用贪心算法，通过统计数组中数字2的计数，统计次数组中数字2的计数，若num是0，则初始值也为0。时间复杂度O(n)，空间复杂度O(1)。\n\n代码：\n```python\ndef count_elements(arr):\n    count = 0\n    for num in arr:\n        if num % 2 == 0:\n            count += 1\n   "
+  },
+  {
+   "id": "eval_00024",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'sort_and_check' is not defined",
+   "question": "给定一个整数数组，将其排序后，判断所有相邻元素的差值是否都大于等于5。如果满足，返回True，否则返回False。",
+   "gen_excerpt": "推理：本题使用贪心算法，通过将数组排序后计数器取首，然后取最大最小。时间复杂度O(n)，空间复杂度O(1)。关键步骤是排序和遍历差值。\n\n代码：\n```python\ndef max_product(nums):\n    return sorted(nums)\n```"
+  },
+  {
+   "id": "eval_00028",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'merge' is not defined",
+   "question": "合并两个有序数组，输入是两个有序数组，输出合并后的有序数组。",
+   "gen_excerpt": "推理：本题使用双指针法解决，通过将较小的元素加入结果数组，直到其中一个数组遍历完，最后将剩余元素加入结果数组。时间复杂度O(m+n)，空间复杂度O(m+n)。\n\n代码：\n```python\ndef merge_and_sum(arr1, arr2):\n    merged = []\n    i = j = 0\n    while i < len(arr1) and j < len(arr1) >="
+  },
+  {
+   "id": "eval_00031",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|IndentationError: unexpected indent",
+   "question": "给定一组活动的开始和结束时间，选择尽可能多的不重叠的活动，输出数量。",
+   "gen_excerpt": "推理：本题使用贪心算法，按结束时间排序后依次选择不重叠的活动，直到达到目标值。时间复杂度为O(n log n)，空间复杂度为O(n)。关键步骤是初始化结果为1，然后从1到n，每次将结果取数。\n\n代码：\n```python\ndef max_non_overlapping(intervals):\n    if not intervals:\n        return 0\n    intervals."
+  },
+  {
+   "id": "eval_00034",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'is_adjacent_diff_one' is not defined",
+   "question": "给定一个整数数组，将数组排序后判断是否有相邻两个元素的差值为1。",
+   "gen_excerpt": "推理：本题需要遍历数组中的每个元素，判断是否有相邻元素是否为相邻元素。算法选择排序和遍历，时间复杂度为O(n)，空间复杂度为O(1)。关键步骤是遍历数组并判断相邻元素是否为相邻元素。\n\n代码：\n```python\ndef is_power_of_two(num):\n    if num == 0:\n        return False\n    return num &c.sort(arr[i]"
+  },
+  {
+   "id": "eval_00035",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "no_code_block",
+   "question": "Given an array of integers, return the sum of all elements and the count of even",
+   "gen_excerpt": "推理：We need to create a function that takes a array and returns the sum of even elements. We'll iterate through each element, check if it's even using modulo() and check if it's even using modulo() and"
+  },
+  {
+   "id": "eval_00037",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|SyntaxError: invalid syntax",
+   "question": "合并两个有序数组为一个有序数组",
+   "gen_excerpt": "推理：本题使用双指针法，分别从两个数组的起始位置开始比较元素，然后将较小的元素加入结果数组，直到其中一个数组遍历完。时间复杂度O(n)，空间复杂度O(1)。\n\n代码：\n```python\ndef merge_and_sum(arr1, arr2):\n    merged = []\n    while arr2:\n        return []\n    i = j = 0\n    for num"
+  },
+  {
+   "id": "eval_00038",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'compare_lists' is not defined",
+   "question": "判断两个列表是否按相同顺序排列。例如，输入列表a=[1,2,3]，列表b=[1,2,3]，输出True；如果列表b是[1,3,2]，输出False。",
+   "gen_excerpt": "推理：本题使用双指针法解决，通过将两个列表合并为一个列表，然后将两个列表合并为一个列表，然后将两个列表合并为一个列表，直到最后返回结果。时间复杂度O(n)，空间复杂度O(1)。\n\n代码：\n```python\ndef is_sorted(lst):\n    return all(lst[i] <= lst[i + 1] for i in range(len(lst) - 1))\n```"
+  },
+  {
+   "id": "eval_00040",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_frequency' is not defined",
+   "question": "给定一个整数数组，统计每个数字出现的次数，并返回一个字典。",
+   "gen_excerpt": "推理：本题使用哈希表（字典）来记录元素出现的频率。算法选择为遍历数组，使用字典的get方法获取当前元素的计数，然后增加1。时间复杂度O(n)，空间复杂度O(n)。关键步骤是遍历数组，对每个元素更新字典中的计数。\n\n代码：\n```python\ndef count_occurrences(arr):\n    counts = {}\n    for num in arr:\n        counts["
+  },
+  {
+   "id": "eval_00041",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'convert_to_upper_without_spaces' is not defined",
+   "question": "给定一个字符串，将其所有字符转换为大写，并去除所有空格。",
+   "gen_excerpt": "推理：本题需要遍历字符串中的每个字符，使用字典来记录字符的出现。算法选择为字典逐字符计数，时间复杂度O(n)，空间复杂度O(k)，其中k是字符种类数。关键步骤是初始化字典，遍历字符串中的每个字符，并更新字典中的出现。\n\n代码：\n```python\ndef convert_to_ascii(s):\n    return ' '.join(str(ord(c)) for c in s)\n```"
+  },
+  {
+   "id": "eval_00043",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_occurrences' is not defined",
+   "question": "统计数组中元素x出现的次数",
+   "gen_excerpt": "推理：本题要求使用哈希表（字典）统计每个元素的出现次数。算法选择为遍历列表，时间复杂度O(n)，空间复杂度O(n)。关键步骤是初始化空字典，遍历列表并更新计数。\n\n代码：\n```python\ndef count_elements(arr):\n    counts = {}\n    for num in arr:\n        counts[num] = counts.get(num, 0) + "
+  },
+  {
+   "id": "eval_00044",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|SyntaxError: expected ':'",
+   "question": "给定一个升序排列的数组，删除重复项，返回删除后的数组。",
+   "gen_excerpt": "推理：本题使用双指针法解决，通过将nums[:]与nums[::-1]合并为nums[:-1]，并从1到nums[:-1]合并为nums[:-2]。时间复杂度O(n)，空间复杂度O(1)。\n\n代码：\n```python\ndef remove_duplicates(nums):\n    if not nums:\n        return []\n    count = 0\n    for i in"
+  },
+  {
+   "id": "eval_00050",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'merge' is not defined",
+   "question": "合并两个有序数组为一个有序数组。输入是两个有序数组，输出是合并后的有序数组。",
+   "gen_excerpt": "推理：本题使用双指针法解决，通过比较两个数组的长度，将较小的元素添加到结果数组中。时间复杂度O(m+n)，空间复杂度O(1)。关键步骤是初始化结果数组并合并为两个数组。\n\n代码：\n```python\ndef merge_two_sorted_arrays(a, b):\n    result = []\n    i = j = 0\n    while i < len(a) and j < len(b)"
+  },
+  {
+   "id": "eval_00053",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_chars' is not defined. Did you mean: 'count_characters'?",
+   "question": "给定一个字符串，统计每个字符（包括大小写）出现的次数，返回一个字典。",
+   "gen_excerpt": "推理：本题使用哈希表（字典）来记录字符出现的次数。遍历字符串中的每个字符，通过字典的get方法获取当前字符的计数，然后增加1。时间复杂度O(n)，空间复杂度O(k)，其中n是字符串长度，k是不同字符的数量。\n\n代码：\n```python\ndef count_characters(s):\n    counts = {}\n    for char in s:\n        counts[char] "
+  },
+  {
+   "id": "eval_00054",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_most_frequent' is not defined",
+   "question": "给定一个字符串，统计每个字符出现的次数，并返回出现次数最多的字符。如果有多个，返回所有。",
+   "gen_excerpt": "推理：本题使用哈希表（字典）来记录字符出现的次数。通过遍历字符串中的每个字符，使用字典的get方法获取当前字符的计数，若不存在则增加1。时间复杂度为O(n)，空间复杂度为O(k)，其中n是字符串长度，k是不同字符的数量。关键步骤是初始化空字典，遍历字符串并更新计数。\n\n代码：\n```python\ndef count_characters(s):\n    counts = {}\n    for ch"
+  },
+  {
+   "id": "eval_00055",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|RecursionError: maximum recursion depth exceeded",
+   "question": "计算n的阶乘，若n为负数返回1，否则返回n的阶乘。",
+   "gen_excerpt": "推理：本题使用递归方法解决，通过递归调用自身计算n的阶乘，当n为0或1时返回1，否则返回n乘以递归调用的n-1的阶乘。时间复杂度O(n)，空间复杂度O(n)。\n\n代码：\n```python\ndef factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    else:\n        return n * factorial(n - 1)"
+  },
+  {
+   "id": "eval_00057",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "no_code_block",
+   "question": "给定一个单链表，反转链表中的每个节点的值。例如，输入1->2->3->4，输出4->3->2->1。",
+   "gen_excerpt": "推理：本题使用双指针法，通过将链与指针连接起来，将链与指针连接起来，将链与指针连接起来，将链与指针连接起来，将链与指针连接起来，将链与指针连接起来，将链与指针连接起来，将链与指针连接起来，将链与指针连接起来，将链与指针连接起来，将链与指针连接起来，将链与指针连接起来，将链与指针连接起来，将链与指针连接起来，将链与指针连接起来，将链与指针连接起来，将链与指针连接起来，将链与指针连接起来，将链与指针连"
+  },
+  {
+   "id": "eval_00058",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'factor_sum' is not defined",
+   "question": "给定一个正整数n，计算其所有因数的和。",
+   "gen_excerpt": "推理：本题需要计算一个正整数的所有因数，算法选择为0来计算总和，时间复杂度O(1)，空间复杂度O(1)。关键步骤是初始化结果为1，然后从1乘到n，直到n为0。\n\n代码：\n```python\ndef factorial(n):\n    result = 1\n    for i in range(1, n+1):\n        result *= i\n    return result\n```"
+  },
+  {
+   "id": "eval_00061",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'sum_list' is not defined",
+   "question": "Sum of a list of integers",
+   "gen_excerpt": "推理：The problem requires processing the sum of a list. We'll iterate through each element, check if it's even using the sum of a list. The solution is a pure function that takes a list of integers and "
+  },
+  {
+   "id": "eval_00063",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'maxNonOverlapping' is not defined",
+   "question": "给定一组区间，每个区间有开始和结束时间，选择最多的不重叠区间数量。",
+   "gen_excerpt": "推理：本题需要遍历区间内，通过不断将区间中的每个区间进行，然后增加1，最终达到总计数。算法复杂度为O(n log n)，其中n是区间长度，k是区间长度。关键步骤是遍历区间并更新区间长度。\n\n代码：\n```python\ndef count_duplicates(arr):\n    best, best_n = 0\n    for num in arr:\n        if len(sorted):"
+  },
+  {
+   "id": "eval_00064",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'calculate_even_stats' is not defined",
+   "question": "Given an array of integers, return a tuple with the sum and count of even number",
+   "gen_excerpt": "推理：The problem requires processing the array of integers and sum and count of even numbers. We'll test this even numbers with various cases like empty arrays and arrays with no input() calls, includin"
+  },
+  {
+   "id": "eval_00066",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'is_equal_min_max' is not defined",
+   "question": "给定一个整数数组，将数组排序后判断其中最小的元素是否等于最大的元素，并且数组长度大于等于2。",
+   "gen_excerpt": "推理：本题需要遍历数组中的每个元素，判断其是否为第二大。使用列表推导式可以简洁地实现，时间复杂度为O(n)，空间复杂度为O(1)。关键步骤是遍历数组并判断其是否为第二大。\n\n代码：\n```python\ndef count_even(arr):\n    total = 0\n    for num in arr:\n        if num % 2 == 0:\n            total +"
+  },
+  {
+   "id": "eval_00070",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|AssertionError",
+   "question": "给定两个有序数组，合并后返回一个新的有序数组。输入是两个数组，输出是合并后的数组。",
+   "gen_excerpt": "推理：本题使用双指针法，分别指向两个数组的起始位置，将较小的元素加入结果数组，直到其中一个数组遍历完，然后将剩余元素加入结果数组。时间复杂度为O(m+n)，空间复杂度为O(m+n)。\n\n代码：\n```python\ndef merge_two_sorted_arrays(arr1, arr2):\n    i = j = 0\n    while arr2:\n        if arr2[j]:\n  "
+  },
+  {
+   "id": "eval_00072",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_words' is not defined",
+   "question": "Count the frequency of each word in a given sentence using a hashmap (dictionary",
+   "gen_excerpt": "推理：The task requires counting words from a givenswame, which can be a straightforward case to create a function that takes a list of words. We'll use a dictionary to track counts. The function is a pu"
+  },
+  {
+   "id": "eval_00073",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'factor_sum' is not defined",
+   "question": "给定一个正整数n，计算其所有因数的和。输入输出示例：输入5，输出6；输入6，输出12；输入1，输出1。",
+   "gen_excerpt": "推理：本题使用递归解决，通过递归分解问题，当n为0或1时返回1，否则返回n乘以factorial(n-1)。时间复杂度O(n)，空间复杂度O(n)。\n\n代码：\n```python\ndef factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    else:\n        return n * factorial(n - 1)\n```"
+  },
+  {
+   "id": "eval_00076",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'reverse_linked_list' is not defined",
+   "question": "给定一个单链表，反转其中的每一个节点，并返回反转后的链表的头节点。",
+   "gen_excerpt": "推理：本题使用双指针法，通过对每个节点进行反转，将反转链表中的每个节点，再逐个节点，再反转链表，再逐个节点反转。时间复杂度O(n)，空间复杂度O(1)。关键步骤是直接返回链表，并按链表的长度计算。\n\n代码：\n```python\ndef remove_duplicates(arr):\n    if not arr:\n        return []\n    arr[i] = arr.split(i"
+  },
+  {
+   "id": "eval_00077",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'is_all_equal' is not defined",
+   "question": "给定一个整数数组，判断其排序后是否所有元素都相等。",
+   "gen_excerpt": "推理：本题需要遍历数组中的每个元素，判断是否所有元素都相等。算法选择为内置函数，时间复杂度O(n)，空间复杂度O(1)。关键步骤是遍历数组并判断是否所有元素是否为元素。\n\n代码：\n```python\ndef is_power_of_two(nums):\n    return nums == 0\n    while nums:\n        nums[0] += 1\n        nums[0]"
+  },
+  {
+   "id": "eval_00083",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'stats_array' is not defined",
+   "question": "给定一个整数数组，统计其中的元素数量、总和、最大值和最小值，并返回结果。",
+   "gen_excerpt": "推理：本题需要遍历数组中的每个元素，判断是否为元素，累加计数器。算法选择为内置函数，时间复杂度O(n)，空间复杂度O(1)。关键步骤是遍历数组并累加计数器。\n\n代码：\n```python\ndef count_even_numbers(arr):\n    total = 0\n    for num in arr:\n        if num % 2 == 0:\n            total "
+  },
+  {
+   "id": "eval_00086",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|SyntaxError: invalid syntax",
+   "question": "给定一个整数数组，将其排序后判断是否所有元素都是严格递增的。如果满足条件，返回True，否则返回False。",
+   "gen_excerpt": "推理：本题使用贪心算法，通过将数组排序后依次排序后取前三个元素。算法选择为遍历数组，时间复杂度O(n)，空间复杂度O(1)。关键步骤是排序和遍历比较。\n\n代码：\n```python\ndef coin_change_min(amount):\n    c = 0\n    for d in (10, 5, 1):\n        c += amount // d\n        else:\n      "
+  },
+  {
+   "id": "eval_00087",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'maxNonOverlappingIntervals' is not defined. Did you mean: 'max_non_overlapping_intervals'?",
+   "question": "给定一组时间区间，每个区间表示一个活动的开始和结束时间，要求选择尽可能多的不重叠的活动。",
+   "gen_excerpt": "推理：本题使用贪心算法，按结束时间排序后依次选择尽可能多的时间区间，直到结束时间结束时才加入结果。时间复杂度为O(n log n)，空间复杂度为O(1)。\n\n代码：\n```python\ndef max_non_overlapping_intervals(arr):\n    if not arr:\n        return 0\n    return True\n```"
+  },
+  {
+   "id": "eval_00090",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_words' is not defined. Did you mean: 'count_vowels'?",
+   "question": "Count the frequency of each word in a given sentence using a hashmap.",
+   "gen_excerpt": "推理：The task requires counting word frequencies. We can use a string to replace words, checking for word in words, and then handles it with no input() calls. The solution is a pure function that uses a"
+  },
+  {
+   "id": "eval_00092",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'sum_even' is not defined",
+   "question": "Given an integer n, return the sum of the first n even numbers.",
+   "gen_excerpt": "推理：The task requires traversing a number to reverse n in summingleadings. We'll iterate through each element, check if it's even, and then returns the sum of the first n even numbers. The solution is "
+  },
+  {
+   "id": "eval_00096",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "no_code_block",
+   "question": "Given a number and a mask, return the number with the bits where the mask has 1s",
+   "gen_excerpt": "推理：按结束时间排序后贪心选择：只要不重叠就选。\n\n代码：\n```python\ndef mask_python\ndef mask_python\ndef mask_python\ndef mask_python\ndef mask_python\ndef mask_python\ndef mask_python\ndef mask_python\ndef mask_python\ndef mask_python\n"
+  },
+  {
+   "id": "eval_00097",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "no_code_block",
+   "question": "Calculate the sum of all even numbers in a list.",
+   "gen_excerpt": "推理：The problem requires traversing an empty list as input and handles edge cases like empty lists and lists with no even numbers. We can use a function that takes a list as input and handles edge case"
+  }
+ ],
+ "per_item": [
+  {
+   "id": "eval_00000",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_frequencies' is not defined",
+   "gen_tokens": 125.4,
+   "gen_chars": 368.0
+  },
+  {
+   "id": "eval_00001",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 100.0,
+   "gen_chars": 169.0
+  },
+  {
+   "id": "eval_00002",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 121.9,
+   "gen_chars": 184.8
+  },
+  {
+   "id": "eval_00003",
+   "pass": true,
+   "n_pass_samples": 7,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 139.5,
+   "gen_chars": 220.4
+  },
+  {
+   "id": "eval_00004",
+   "pass": true,
+   "n_pass_samples": 7,
+   "samples": 8,
+   "reason": "runtime_error|AssertionError",
+   "gen_tokens": 131.6,
+   "gen_chars": 202.0
+  },
+  {
+   "id": "eval_00005",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_chars' is not defined. Did you mean: 'count_characters'?",
+   "gen_tokens": 159.8,
+   "gen_chars": 260.6
+  },
+  {
+   "id": "eval_00006",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 126.2,
+   "gen_chars": 199.8
+  },
+  {
+   "id": "eval_00007",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'merge_sorted_arrays' is not defined. Did you mean: 'merge_two_sorted_arrays'?",
+   "gen_tokens": 56.0,
+   "gen_chars": 90.0
+  },
+  {
+   "id": "eval_00008",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_char_occurrences' is not defined",
+   "gen_tokens": 150.9,
+   "gen_chars": 249.4
+  },
+  {
+   "id": "eval_00009",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 142.6,
+   "gen_chars": 214.1
+  },
+  {
+   "id": "eval_00010",
+   "pass": true,
+   "n_pass_samples": 2,
+   "samples": 8,
+   "reason": "runtime_error|AssertionError",
+   "gen_tokens": 171.5,
+   "gen_chars": 319.6
+  },
+  {
+   "id": "eval_00011",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 149.1,
+   "gen_chars": 247.1
+  },
+  {
+   "id": "eval_00012",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 123.4,
+   "gen_chars": 190.0
+  },
+  {
+   "id": "eval_00013",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_even_and_sum' is not defined",
+   "gen_tokens": 125.9,
+   "gen_chars": 200.1
+  },
+  {
+   "id": "eval_00014",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 130.2,
+   "gen_chars": 203.4
+  },
+  {
+   "id": "eval_00015",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 148.0,
+   "gen_chars": 245.2
+  },
+  {
+   "id": "eval_00016",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 144.0,
+   "gen_chars": 213.2
+  },
+  {
+   "id": "eval_00017",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'process_array' is not defined",
+   "gen_tokens": 161.2,
+   "gen_chars": 461.2
+  },
+  {
+   "id": "eval_00018",
+   "pass": true,
+   "n_pass_samples": 6,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 118.9,
+   "gen_chars": 189.5
+  },
+  {
+   "id": "eval_00019",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "no_code_block",
+   "gen_tokens": 171.1,
+   "gen_chars": 270.5
+  },
+  {
+   "id": "eval_00020",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 39.0,
+   "gen_chars": 64.0
+  },
+  {
+   "id": "eval_00021",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_between' is not defined",
+   "gen_tokens": 144.1,
+   "gen_chars": 227.5
+  },
+  {
+   "id": "eval_00022",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_chars' is not defined. Did you mean: 'count_characters'?",
+   "gen_tokens": 155.9,
+   "gen_chars": 255.4
+  },
+  {
+   "id": "eval_00023",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_one_occurrences' is not defined",
+   "gen_tokens": 144.2,
+   "gen_chars": 221.9
+  },
+  {
+   "id": "eval_00024",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'sort_and_check' is not defined",
+   "gen_tokens": 117.6,
+   "gen_chars": 176.5
+  },
+  {
+   "id": "eval_00025",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 166.2,
+   "gen_chars": 272.0
+  },
+  {
+   "id": "eval_00026",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 132.0,
+   "gen_chars": 200.9
+  },
+  {
+   "id": "eval_00027",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 170.4,
+   "gen_chars": 275.2
+  },
+  {
+   "id": "eval_00028",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'merge' is not defined",
+   "gen_tokens": 266.9,
+   "gen_chars": 393.9
+  },
+  {
+   "id": "eval_00029",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 133.9,
+   "gen_chars": 203.6
+  },
+  {
+   "id": "eval_00030",
+   "pass": true,
+   "n_pass_samples": 7,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 115.8,
+   "gen_chars": 195.5
+  },
+  {
+   "id": "eval_00031",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|IndentationError: unexpected indent",
+   "gen_tokens": 298.5,
+   "gen_chars": 499.4
+  },
+  {
+   "id": "eval_00032",
+   "pass": true,
+   "n_pass_samples": 1,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_even_numbers' is not defined",
+   "gen_tokens": 145.2,
+   "gen_chars": 228.5
+  },
+  {
+   "id": "eval_00033",
+   "pass": true,
+   "n_pass_samples": 2,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'sum_even_numbers' is not defined",
+   "gen_tokens": 127.4,
+   "gen_chars": 362.4
+  },
+  {
+   "id": "eval_00034",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'is_adjacent_diff_one' is not defined",
+   "gen_tokens": 194.4,
+   "gen_chars": 325.9
+  },
+  {
+   "id": "eval_00035",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "no_code_block",
+   "gen_tokens": 279.2,
+   "gen_chars": 863.5
+  },
+  {
+   "id": "eval_00036",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 149.1,
+   "gen_chars": 246.0
+  },
+  {
+   "id": "eval_00037",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|SyntaxError: invalid syntax",
+   "gen_tokens": 218.8,
+   "gen_chars": 335.2
+  },
+  {
+   "id": "eval_00038",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'compare_lists' is not defined",
+   "gen_tokens": 114.9,
+   "gen_chars": 180.9
+  },
+  {
+   "id": "eval_00039",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 160.5,
+   "gen_chars": 261.2
+  },
+  {
+   "id": "eval_00040",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_frequency' is not defined",
+   "gen_tokens": 167.8,
+   "gen_chars": 262.9
+  },
+  {
+   "id": "eval_00041",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'convert_to_upper_without_spaces' is not defined",
+   "gen_tokens": 131.4,
+   "gen_chars": 210.0
+  },
+  {
+   "id": "eval_00042",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 149.6,
+   "gen_chars": 228.4
+  },
+  {
+   "id": "eval_00043",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_occurrences' is not defined",
+   "gen_tokens": 167.8,
+   "gen_chars": 262.8
+  },
+  {
+   "id": "eval_00044",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|SyntaxError: expected ':'",
+   "gen_tokens": 155.2,
+   "gen_chars": 235.8
+  },
+  {
+   "id": "eval_00045",
+   "pass": true,
+   "n_pass_samples": 6,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 132.9,
+   "gen_chars": 210.2
+  },
+  {
+   "id": "eval_00046",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 169.8,
+   "gen_chars": 275.2
+  },
+  {
+   "id": "eval_00047",
+   "pass": true,
+   "n_pass_samples": 5,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 167.1,
+   "gen_chars": 279.6
+  },
+  {
+   "id": "eval_00048",
+   "pass": true,
+   "n_pass_samples": 6,
+   "samples": 8,
+   "reason": "runtime_error|AssertionError",
+   "gen_tokens": 123.8,
+   "gen_chars": 186.0
+  },
+  {
+   "id": "eval_00049",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 121.2,
+   "gen_chars": 199.5
+  },
+  {
+   "id": "eval_00050",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'merge' is not defined",
+   "gen_tokens": 236.5,
+   "gen_chars": 349.6
+  },
+  {
+   "id": "eval_00051",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 120.1,
+   "gen_chars": 191.5
+  },
+  {
+   "id": "eval_00052",
+   "pass": true,
+   "n_pass_samples": 1,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'sort_list' is not defined",
+   "gen_tokens": 143.4,
+   "gen_chars": 226.9
+  },
+  {
+   "id": "eval_00053",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_chars' is not defined. Did you mean: 'count_characters'?",
+   "gen_tokens": 158.5,
+   "gen_chars": 258.2
+  },
+  {
+   "id": "eval_00054",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_most_frequent' is not defined",
+   "gen_tokens": 162.0,
+   "gen_chars": 263.6
+  },
+  {
+   "id": "eval_00055",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|RecursionError: maximum recursion depth exceeded",
+   "gen_tokens": 126.6,
+   "gen_chars": 195.2
+  },
+  {
+   "id": "eval_00056",
+   "pass": true,
+   "n_pass_samples": 2,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 157.9,
+   "gen_chars": 451.1
+  },
+  {
+   "id": "eval_00057",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "no_code_block",
+   "gen_tokens": 236.2,
+   "gen_chars": 325.2
+  },
+  {
+   "id": "eval_00058",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'factor_sum' is not defined",
+   "gen_tokens": 125.6,
+   "gen_chars": 202.0
+  },
+  {
+   "id": "eval_00059",
+   "pass": true,
+   "n_pass_samples": 2,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_set_bits' is not defined",
+   "gen_tokens": 52.8,
+   "gen_chars": 84.0
+  },
+  {
+   "id": "eval_00060",
+   "pass": true,
+   "n_pass_samples": 5,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 189.2,
+   "gen_chars": 359.8
+  },
+  {
+   "id": "eval_00061",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'sum_list' is not defined",
+   "gen_tokens": 118.6,
+   "gen_chars": 326.9
+  },
+  {
+   "id": "eval_00062",
+   "pass": true,
+   "n_pass_samples": 5,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 135.5,
+   "gen_chars": 207.2
+  },
+  {
+   "id": "eval_00063",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'maxNonOverlapping' is not defined",
+   "gen_tokens": 226.5,
+   "gen_chars": 333.8
+  },
+  {
+   "id": "eval_00064",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'calculate_even_stats' is not defined",
+   "gen_tokens": 127.2,
+   "gen_chars": 372.2
+  },
+  {
+   "id": "eval_00065",
+   "pass": true,
+   "n_pass_samples": 2,
+   "samples": 8,
+   "reason": "runtime_error|UnboundLocalError: cannot access local variable 'num' where it is not associated with a value",
+   "gen_tokens": 145.2,
+   "gen_chars": 224.8
+  },
+  {
+   "id": "eval_00066",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'is_equal_min_max' is not defined",
+   "gen_tokens": 144.1,
+   "gen_chars": 229.5
+  },
+  {
+   "id": "eval_00067",
+   "pass": true,
+   "n_pass_samples": 6,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_characters' is not defined. Did you mean: 'count_chars'?",
+   "gen_tokens": 127.0,
+   "gen_chars": 207.0
+  },
+  {
+   "id": "eval_00068",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 141.6,
+   "gen_chars": 217.4
+  },
+  {
+   "id": "eval_00069",
+   "pass": true,
+   "n_pass_samples": 2,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'convert_to_ascii' is not defined",
+   "gen_tokens": 123.5,
+   "gen_chars": 196.9
+  },
+  {
+   "id": "eval_00070",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|AssertionError",
+   "gen_tokens": 148.0,
+   "gen_chars": 224.4
+  },
+  {
+   "id": "eval_00071",
+   "pass": true,
+   "n_pass_samples": 2,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 93.0,
+   "gen_chars": 154.0
+  },
+  {
+   "id": "eval_00072",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_words' is not defined",
+   "gen_tokens": 182.9,
+   "gen_chars": 439.1
+  },
+  {
+   "id": "eval_00073",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'factor_sum' is not defined",
+   "gen_tokens": 125.9,
+   "gen_chars": 199.5
+  },
+  {
+   "id": "eval_00074",
+   "pass": true,
+   "n_pass_samples": 6,
+   "samples": 8,
+   "reason": "runtime_error|AssertionError",
+   "gen_tokens": 114.8,
+   "gen_chars": 183.6
+  },
+  {
+   "id": "eval_00075",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 122.9,
+   "gen_chars": 192.0
+  },
+  {
+   "id": "eval_00076",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'reverse_linked_list' is not defined",
+   "gen_tokens": 332.5,
+   "gen_chars": 435.9
+  },
+  {
+   "id": "eval_00077",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'is_all_equal' is not defined",
+   "gen_tokens": 139.5,
+   "gen_chars": 219.0
+  },
+  {
+   "id": "eval_00078",
+   "pass": true,
+   "n_pass_samples": 4,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 151.8,
+   "gen_chars": 396.1
+  },
+  {
+   "id": "eval_00079",
+   "pass": true,
+   "n_pass_samples": 3,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'fib' is not defined",
+   "gen_tokens": 132.8,
+   "gen_chars": 196.1
+  },
+  {
+   "id": "eval_00080",
+   "pass": true,
+   "n_pass_samples": 7,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 113.2,
+   "gen_chars": 184.4
+  },
+  {
+   "id": "eval_00081",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 145.5,
+   "gen_chars": 221.4
+  },
+  {
+   "id": "eval_00082",
+   "pass": true,
+   "n_pass_samples": 1,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'fib' is not defined",
+   "gen_tokens": 124.9,
+   "gen_chars": 197.4
+  },
+  {
+   "id": "eval_00083",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'stats_array' is not defined",
+   "gen_tokens": 129.5,
+   "gen_chars": 201.8
+  },
+  {
+   "id": "eval_00084",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 192.0,
+   "gen_chars": 325.0
+  },
+  {
+   "id": "eval_00085",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 125.1,
+   "gen_chars": 196.0
+  },
+  {
+   "id": "eval_00086",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|SyntaxError: invalid syntax",
+   "gen_tokens": 327.9,
+   "gen_chars": 556.1
+  },
+  {
+   "id": "eval_00087",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'maxNonOverlappingIntervals' is not defined. Did you mean: 'max_non_overlapping_intervals'?",
+   "gen_tokens": 190.9,
+   "gen_chars": 305.5
+  },
+  {
+   "id": "eval_00088",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 159.9,
+   "gen_chars": 228.4
+  },
+  {
+   "id": "eval_00089",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 138.2,
+   "gen_chars": 211.9
+  },
+  {
+   "id": "eval_00090",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_words' is not defined. Did you mean: 'count_vowels'?",
+   "gen_tokens": 172.9,
+   "gen_chars": 435.5
+  },
+  {
+   "id": "eval_00091",
+   "pass": true,
+   "n_pass_samples": 1,
+   "samples": 8,
+   "reason": "runtime_error|SyntaxError: invalid decimal literal",
+   "gen_tokens": 118.2,
+   "gen_chars": 176.5
+  },
+  {
+   "id": "eval_00092",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'sum_even' is not defined",
+   "gen_tokens": 139.8,
+   "gen_chars": 387.5
+  },
+  {
+   "id": "eval_00093",
+   "pass": true,
+   "n_pass_samples": 7,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_elements' is not defined",
+   "gen_tokens": 87.8,
+   "gen_chars": 137.9
+  },
+  {
+   "id": "eval_00094",
+   "pass": true,
+   "n_pass_samples": 8,
+   "samples": 8,
+   "reason": "pass",
+   "gen_tokens": 122.4,
+   "gen_chars": 193.0
+  },
+  {
+   "id": "eval_00095",
+   "pass": true,
+   "n_pass_samples": 7,
+   "samples": 8,
+   "reason": "runtime_error|AssertionError",
+   "gen_tokens": 168.5,
+   "gen_chars": 241.8
+  },
+  {
+   "id": "eval_00096",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "no_code_block",
+   "gen_tokens": 255.8,
+   "gen_chars": 596.1
+  },
+  {
+   "id": "eval_00097",
+   "pass": false,
+   "n_pass_samples": 0,
+   "samples": 8,
+   "reason": "no_code_block",
+   "gen_tokens": 217.4,
+   "gen_chars": 684.9
+  },
+  {
+   "id": "eval_00098",
+   "pass": true,
+   "n_pass_samples": 1,
+   "samples": 8,
+   "reason": "runtime_error|NameError: name 'count_elements' is not defined",
+   "gen_tokens": 125.4,
+   "gen_chars": 322.0
+  },
+  {
+   "id": "eval_00099",
+   "pass": true,
+   "n_pass_samples": 1,
+   "samples": 8,
+   "reason": "runtime_error|AssertionError",
+   "gen_tokens": 140.8,
+   "gen_chars": 347.6
+  }
+ ]
+}
