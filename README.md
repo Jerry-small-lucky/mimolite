@@ -146,7 +146,9 @@ SWA/GA 比例与位置（a003）、深度 vs 宽度（a001）、WSD×GradPower�
 ## 联系
 
 GitHub 仓库：<https://github.com/Jerry-small-lucky/mimolite>
-模型权重：暂未发布（约 17 GB checkpoint / 221 MB GGUF），如有需要请在仓库 Issues 留言。
+模型权重：已发布（Release v0.1.0，FP16 GGUF 210.7 MiB + Q4_K_M 79.1 MiB）：
+<https://github.com/Jerry-small-lucky/mimolite/releases/latest>
+如需 checkpoint 或其他格式，请在仓库 Issues 留言。
 
 ---
 
